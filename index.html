@@ -4,32 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Branding | UPI LABS</title>
-    <!-- Font Modern -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Modern & Elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <!-- Icon (FontAwesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode">
-
-    <!-- Loading Animation -->
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
+<body>
 
     <!-- Custom Cursor -->
     <div class="cursor"></div>
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">UPI<span>LABS</span></div>
+        <div class="logo">UPI<span>LABS.</span></div>
         <ul class="nav-links">
-            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#games"><i class="fas fa-gamepad"></i> Games</a></li>
-            <li><a href="#series"><i class="fas fa-tv"></i> Series</a></li>
-            <li><a href="#kanal"><i class="fas fa-hashtag"></i> Kanal</a></li>
-            <li><a href="#support"><i class="fas fa-heart"></i> Support</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#series">Series</a></li>
+            <li><a href="#kanal">Kanal</a></li>
+            <li><a href="#support">Support</a></li>
         </ul>
         <div class="nav-extra">
             <button id="theme-toggle"><i class="fas fa-moon"></i></button>
@@ -39,27 +34,29 @@
 
     <!-- Section HOME -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="UPI LABS">UPI LABS</h1>
-            <p>Content Creator | Anime Enthusiast | Pro Gamer</p>
-            <a href="#about" class="btn-main">Explore <i class="fas fa-arrow-down"></i></a>
+        <div class="hero-content reveal active">
+            <div class="badge">Hai, selamat datang! 👋</div>
+            <h1 class="title">Saya <span class="gradient-text">Kreator</span> <br> Masa Depan.</h1>
+            <p>Mahasiswa, Content Creator, dan penikmat Pop Culture. Saya membagikan hal-hal seru tentang Anime & Game.</p>
+            <a href="#about" class="btn-main">Kenalan Lebih Lanjut</a>
         </div>
-        <div class="background-anim"></div>
     </section>
 
     <!-- Section ABOUT -->
     <section id="about" class="about reveal">
         <h2 class="section-title">About Me</h2>
         <div class="about-container">
-            <!-- GANTI GAMBAR: Ganti 'profile.jpg' dengan file fotomu -->
+            <!-- TEMPAT FOTO PROFIL: Ganti src dengan nama gambarmu di folder assets -->
             <div class="profile-img">
-                <img src="https://via.placeholder.com/300" alt="My Profile">
+                <img src="assets/foto-profil.jpg" alt="Foto Profil Saya" onerror="this.src='https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500&q=80'">
             </div>
             <div class="about-text">
-                <h3>Halo, Saya Kreator!</h3>
-                <p>Saya adalah seorang Mahasiswa dan Content Creator di TikTok & YouTube Shorts. Fokus saya adalah membahas dunia anime, game, dan semua hal tentang pop culture.</p>
+                <h3>Halo, Saya Upi!</h3>
+                <p>Saya suka bercerita melalui video pendek. Saat ini aktif membuat konten di TikTok dan YouTube Shorts tentang game yang sedang hype dan review series favorit.</p>
                 <div class="tags">
-                    <span>#Student</span><span>#Gamer</span><span>#Otaku</span>
+                    <span>#ContentCreator</span>
+                    <span>#Gamer</span>
+                    <span>#StudentLife</span>
                 </div>
             </div>
         </div>
@@ -67,55 +64,71 @@
 
     <!-- Section GAME RECOMMENDATION -->
     <section id="games" class="games reveal">
-        <h2 class="section-title">Game Recs</h2>
+        <h2 class="section-title">Game Recommendations</h2>
         <div class="card-grid">
             <!-- Card 1 -->
             <div class="card">
-                <!-- GANTI GAMBAR: Ganti URL di src dengan gambar game -->
-                <img src="https://via.placeholder.com/400x200" alt="Game">
+                <!-- GAMBAR GAME 1 -->
+                <img src="assets/game1.jpg" alt="Game 1" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&q=80'">
                 <div class="card-info">
                     <h4>Genshin Impact</h4>
-                    <p>Open world RPG dengan visual memukau.</p>
+                    <p>Eksplorasi tanpa batas dengan cerita yang mendalam.</p>
                 </div>
             </div>
-            <!-- Tambahkan card lain di bawah sini -->
+            <!-- Card 2 -->
+            <div class="card">
+                <!-- GAMBAR GAME 2 -->
+                <img src="assets/game2.jpg" alt="Game 2" onerror="this.src='https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=500&q=80'">
+                <div class="card-info">
+                    <h4>Valorant</h4>
+                    <p>Game FPS taktis yang kompetitif dan seru dimainkan bareng teman.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Section SERIES -->
     <section id="series" class="series reveal">
-        <h2 class="section-title">Fav Series</h2>
+        <h2 class="section-title">Favorite Series</h2>
         <div class="card-grid">
-            <div class="card">
+            <!-- Card Series 1 -->
+            <div class="card series-card">
                 <div class="card-info">
                     <h4>Jujutsu Kaisen</h4>
                     <span class="genre">Action / Supernatural</span>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
                 </div>
             </div>
+            <!-- Card Series 2 -->
+            <div class="card series-card">
+                <div class="card-info">
+                    <h4>Stranger Things</h4>
+                    <span class="genre">Sci-Fi / Thriller</span>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Section KANAL -->
-    <section id="kanal" class="kanal reveal">
-        <h2 class="section-title">Social Kanal</h2>
-        <div class="social-btns">
-            <a href="https://youtube.com" target="_blank" class="social-btn yt"><i class="fab fa-youtube"></i> YouTube</a>
-            <a href="https://tiktok.com" target="_blank" class="social-btn tt"><i class="fab fa-tiktok"></i> TikTok</a>
+    <!-- Section KANAL & SUPPORT -->
+    <section class="bottom-section reveal">
+        <div id="kanal" class="kanal-box">
+            <h3>Kunjungi Kanal Saya</h3>
+            <div class="social-btns">
+                <a href="https://youtube.com" target="_blank" class="social-btn"><i class="fab fa-youtube" style="color: #FF0000;"></i> YouTube</a>
+                <a href="https://tiktok.com" target="_blank" class="social-btn"><i class="fab fa-tiktok" style="color: #000;"></i> TikTok</a>
+            </div>
         </div>
-    </section>
 
-    <!-- Section SUPPORT -->
-    <section id="support" class="support reveal">
-        <div class="support-card">
+        <div id="support" class="support-box">
             <h3>Support My Work ☕</h3>
-            <p>Dukung saya untuk terus berkarya lewat Saweria!</p>
-            <a href="https://saweria.co" target="_blank" class="btn-support">Kirim Dukungan</a>
+            <p>Suka dengan konten saya? Traktir saya kopi!</p>
+            <a href="https://saweria.co" target="_blank" class="btn-main support-btn">Donasi via Saweria</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 UPI LABS. Built with <i class="fas fa-heart"></i></p>
+        <p>&copy; 2024 UPI LABS. Dibuat dengan <i class="fas fa-heart" style="color:#5d5fef;"></i></p>
     </footer>
 
     <script src="script.js"></script>
