@@ -1,50 +1,48 @@
-// 1. Loading Animation
-window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
-    setTimeout(() => {
-        loader.style.opacity = '0';
-        setTimeout(() => loader.style.display = 'none', 500);
-    }, 1500);
-});
-
-// 2. Custom Cursor
+// 1. Custom Cursor
 const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
 });
 
-// 3. Reveal Animation saat Scroll
+// Cursor membesar saat diarahkan ke tombol atau link
+document.querySelectorAll('a, button').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        cursor.style.opacity = '0.5';
+    });
+    item.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursor.style.opacity = '0.2';
+    });
+});
+
+// 2. Reveal Animation saat Scroll (Efek muncul perlahan)
 const reveal = () => {
     const reveals = document.querySelectorAll('.reveal');
     reveals.forEach(el => {
         const windowHeight = window.innerHeight;
         const revealTop = el.getBoundingClientRect().top;
-        const revealPoint = 150;
+        const revealPoint = 100; // Jarak trigger animasi
+        
         if (revealTop < windowHeight - revealPoint) {
             el.classList.add('active');
         }
     });
 };
 window.addEventListener('scroll', reveal);
+reveal(); // Panggil sekali saat web pertama kali dimuat
 
-// 4. Dark Mode Toggle
+// 3. Dark/Light Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
 themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
+    document.body.classList.toggle('dark-mode');
     const icon = themeToggle.querySelector('i');
-    if(document.body.classList.contains('light-mode')) {
+    
+    // Ubah icon matahari/bulan
+    if(document.body.classList.contains('dark-mode')) {
         icon.classList.replace('fa-moon', 'fa-sun');
     } else {
         icon.classList.replace('fa-sun', 'fa-moon');
     }
-});
-
-// 5. Mobile Menu (Hamburger)
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active-nav');
-    hamburger.classList.toggle('toggle');
 });
